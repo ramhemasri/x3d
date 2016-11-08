@@ -109,26 +109,32 @@
             linkFromPortIdProperty: "fromPort",
             linkToPortIdProperty: "toPort",
             nodeDataArray: [
-              { key: "Record1",
+              { key: "Wire No.",
                 fields: [
-                  { name: "field1", info: "", color: "#F7B84B", figure: "Ellipse" },
-                  { name: "field2", info: "the second one", color: "#F25022", figure: "Ellipse" },
-                  { name: "fieldThree", info: "3rd", color: "#00BCF2" }
+                  { name: "RD", info: "T4", color: "#F25022" },
+                  { name: "BK", info: "T5", color: "#F25022" },
+				  { name: "BL", info: "101", color: "#F25022" },
+				  { name: "WH", info: "102", color: "#F25022" },
+                  { name: "GN", info: "GND", color: "#00BCF2" }
                 ],
                 loc: "0 0" },
-              { key: "Record2",
+              { key: "Block ID",
                 fields: [
-                  { name: "fieldA", info: "",       color: "#FFB900", figure: "Diamond" },
-                  { name: "fieldB", info: "",       color: "#F25022", figure: "Rectangle" },
-                  { name: "fieldC", info: "",       color: "#7FBA00", figure: "Diamond" },
-                  { name: "fieldD", info: "fourth", color: "#00BCF2",  figure: "Rectangle" }
+                  { name: "2A ", info: "",       color: "#FFB900", figure: "" },
+				  { name: "2A  ", info: "",       color: "#FFB900", figure: "Diamond" },
+                  { name: "2A   ", info: "",       color: "#F25022", figure: "Diamond" },
+                  { name: "2A    ", info: "",       color: "#7FBA00", figure: "Diamond" },
+                  { name: "2A     ", info: "", color: "#00BCF2",  figure: "Diamond" }
                 ],
-                loc: "250 0" }
+                loc: "200 0" }
+
             ],
             linkDataArray: [
-              { from: "Record1", fromPort: "field1", to: "Record2", toPort: "fieldA" },
-              { from: "Record1", fromPort: "field2", to: "Record2", toPort: "fieldD" },
-              { from: "Record1", fromPort: "fieldThree", to: "Record2", toPort: "fieldB" }
+              { from: "Wire No.", fromPort: "RD", to: "Block ID", toPort: "2A " },
+			  { from: "Wire No.", fromPort: "BK", to: "Block ID", toPort: "2A  " },
+			  { from: "Wire No.", fromPort: "BL", to: "Block ID", toPort: "2A   " },
+			  { from: "Wire No.", fromPort: "WH", to: "Block ID", toPort: "2A    " },
+			  { from: "Wire No.", fromPort: "GN", to: "Block ID", toPort: "2A     " },
             ]
           });
 
